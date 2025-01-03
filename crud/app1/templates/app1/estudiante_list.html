@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estudiantes List</title>
+</head>
+<body>
+    <h1>Estudiantes List</h1>
+    <a href="{% url 'estudiante_create' %}">Create New</a>
+    <ul>
+        {% for estudiante in estudiantes %}
+            <li>
+                <a href="{% url 'estudiante_detail' estudiante.id %}">{{ estudiante.nombre }}</a>
+                <a href="{% url 'estudiante_update' estudiante.id %}">Edit</a>
+                <a href="{% url 'estudiante_delete' estudiante.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

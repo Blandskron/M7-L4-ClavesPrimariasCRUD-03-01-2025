@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estudiante Detail</title>
+</head>
+<body>
+    <h1>{{ estudiante.nombre }}</h1>
+    <p>Curso: {{ estudiante.curso.nombre }}</p>
+    <a href="{% url 'estudiante_update' estudiante.id %}">Edit</a>
+    <a href="{% url 'estudiante_list' %}">Back to List</a>
+</body>
+</html>
