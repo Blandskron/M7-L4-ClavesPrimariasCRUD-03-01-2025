@@ -7,7 +7,14 @@
     <h1>Estudiante Form</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div>
+            <label for="id_nombre">Nombre:</label>
+            {{ form.nombre }}
+        </div>
+        <div>
+            <label for="id_curso">Curso:</label>
+            {{ form.curso }}
+        </div>
         <button type="submit">Save</button>
     </form>
 </body>
